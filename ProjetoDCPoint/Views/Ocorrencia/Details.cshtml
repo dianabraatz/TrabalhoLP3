@@ -1,0 +1,42 @@
+﻿@model ProjetoDCPoint.Models.ocorrencia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ocorrencia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ponto.codPonto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ponto.codPonto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.statusOcorrencia.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.statusOcorrencia.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.justificativa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.justificativa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codOcorrencia_ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

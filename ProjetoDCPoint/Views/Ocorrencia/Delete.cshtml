@@ -1,0 +1,48 @@
+﻿@model ProjetoDCPoint.Models.ocorrencia
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ocorrencia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ponto.codPonto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ponto.codPonto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.statusOcorrencia.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.statusOcorrencia.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.justificativa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.justificativa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

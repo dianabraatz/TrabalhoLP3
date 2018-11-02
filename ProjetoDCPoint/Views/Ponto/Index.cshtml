@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ProjetoDCPoint.Models.ponto>
+
+@{
+    ViewBag.Title = "Início";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo", "Criar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.funcionario.senha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dh_ponto1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dh_ponto2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dh_ponto3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dh_ponto4)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.funcionario.senha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dh_ponto1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dh_ponto2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dh_ponto3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dh_ponto4)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.codPonto }) |
+            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.codPonto }) |
+            @Html.ActionLink("Excluir", "Excluir", new { id=item.codPonto })
+        </td>
+    </tr>
+}
+
+</table>

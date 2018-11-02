@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProjetoDCPoint.Models.funcao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nivelAcesso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nivelAcesso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codFuncao }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codFuncao }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codFuncao })
+        </td>
+    </tr>
+}
+
+</table>

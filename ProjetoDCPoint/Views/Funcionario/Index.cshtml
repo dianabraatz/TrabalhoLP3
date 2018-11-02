@@ -1,0 +1,87 @@
+﻿@model IEnumerable<ProjetoDCPoint.Models.funcionario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.funcao.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.setor.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cnh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataAdmissao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ctps)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.funcao.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.setor.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cnh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataAdmissao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ctps)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.numRegistro }) |
+            @Html.ActionLink("Details", "Details", new { id=item.numRegistro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.numRegistro })
+        </td>
+    </tr>
+}
+
+</table>

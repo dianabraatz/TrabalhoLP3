@@ -1,0 +1,58 @@
+﻿@model ProjetoDCPoint.Models.ponto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ponto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.funcionario.senha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.funcionario.senha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dh_ponto1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dh_ponto1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dh_ponto2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dh_ponto2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dh_ponto3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dh_ponto3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dh_ponto4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dh_ponto4)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codPonto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
